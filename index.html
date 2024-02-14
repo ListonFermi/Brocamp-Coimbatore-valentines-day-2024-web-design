@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish Your Valentine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="cardOutside">
+        <div class="page">
+            <div style="font-size: 3rem;">🎀</div>
+            <h1>Hello!</h1>
+            <h1 style="font-size: 3rem;">❤️</h1>
+            <h2 style="margin-left: 40px;"> You have a greetings from your valentine</h1>
+                <label for=""></label>
+                <form action="" id="inputForm">
+                    <input type="text" name="" id="inputName" placeholder="Enter your name to open!!!" required>
+                    <br>
+                    <button class="btn" type="submit">Yes, Open 🎀</button>
+                    <button class="btn" id="noBtn" onmouseover="moveBtn()" onclick="moveBtn()"
+                        style="position: absolute; margin-left: 5px;">No, Rejected 😭</button>
+                </form>
+        </div>
+    </div>
+    <div id="cardInside">
+        <div class="innerPage">
+
+            <div id="content">
+                <p id="name2"></p>
+                <p>
+                    You have been with me for the past 5 years, You have should up for me as everything in my life. In
+                    the fine, When I am down, you were there for me as a supporter, when I'm in a situation, when I can't
+                    take a decision, you were there as a decision maker. When I am ill you were there for me as a mother,
+                    in the dark times hits me you were my light of my life.
+
+                    You always make me heart pond with the love taht you are showing to me, you always makes my heart
+                    blush with happiness.
+
+
+                </p>
+            </div>
+        </div>
+        <div class="innerPage">
+            <p>
+                "Oh my dear"
+                The letter's of my poem
+                Are pouring upon you.
+
+                The roses in my garden,
+                Are fainted by your Beauty.
+
+                When the life is going to pave
+                Hard paths for you,
+                I will be there as a eyelashes for an eye.
+
+                Even the whole world is turing against
+                you can blindly relay upon me,
+
+                These words are not enough for me to express my love for you. I wish, I could hold you hands forever.
+
+                Will you be mine for ever?....
+                Will you marry me ?........
+                Be my valentine forever..........
+            </p>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    let inputForm = document.getElementById('inputForm')
+    let cardOutside = document.getElementById('cardOutside')
+    let inputName = document.getElementById('inputName')
+    let name2 = document.getElementById('name2')
+
+    inputForm.addEventListener('submit', (e) => {
+        e.preventDefault()
+        cardOutside.style.display = 'none'
+        cardInside.style.display = 'flex'
+        name2.innerText = 'To my dear ' + inputName.value + ','
+    })
+
+
+    function moveBtn() {
+        let noBtn = document.getElementById('noBtn')
+        var x = Math.random() * (window.innerWidth)
+        var y = Math.random() * (window.innerHeight)
+
+        noBtn.style.top = `${x}px`
+        noBtn.style.left = `${y}px`
+    }
+
+
+
+</script>
+
+</html>
